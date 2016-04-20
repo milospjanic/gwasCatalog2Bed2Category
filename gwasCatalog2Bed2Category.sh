@@ -15,7 +15,7 @@ echo "
 for var in \"\$@\"
 do
   echo Received: \$var
-grep \"\$var\" GwasCatalog.bed > \"\$var\".gwascatalog.bed 
+grep -i \"\$var\" GwasCatalog.bed > \"\$var\".gwascatalog.bed 
 echo Done: \$var
 done
 
