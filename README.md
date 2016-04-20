@@ -8,7 +8,7 @@ Files that will be generated are: GwasCatalog.bed, which contains shorter bed ve
 gwasCatalog2Bed2Category will also remove duplicates from phenotype/term specific bed files, that may occur as you may greb similar but different phenotypes that contain identical SNPs. Script will save those files as .bed.cut.sort.uniq and report the number of SNPs before and after removing deplicates.
 
 #Usage
-Enter all search terms as arguments passed to a Bash script and if your serach term is a phrase use double quotes. Note that names of phenotypes in GWAS Catalog start with capital letter but then next word is with small letter.
+Enter all search terms as arguments passed to a Bash script and if your serach term is a phrase use double quotes. Note that names of phenotypes in GWAS Catalog start with capital letter but then next word is with small letter. **That is why we enabled serach to be case insensitive in this script.**
 <pre>
 chmod 755 gwasCatalog2Bed2Category.sh
 ~/gwasCatalog2Bed2Category "Coronary artery" "Coronary heart" "Bipolar disorder"
