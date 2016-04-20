@@ -15,21 +15,21 @@ chmod 755 gwasCatalog2Bed2Category.sh
 <pre>
 chmod 755 gwasCatalog2Bed2Category.sh
 ~/gwasCatalog2Bed2Category "Coronary artery" "Coronary heart" "Bipolar disorder"
-~/script "Coronary artery" "Coronary heart" "Bipolar disorder"
---2016-04-19 23:22:22--  http://www.genome.gov/admin/gwascatalog.txt
+
+--2016-04-20 00:01:09--  http://www.genome.gov/admin/gwascatalog.txt
 Resolving www.genome.gov (www.genome.gov)... 156.40.242.24
 Connecting to www.genome.gov (www.genome.gov)|156.40.242.24|:80... connected.
 HTTP request sent, awaiting response... 301 Moved Permanently
 Location: https://www.genome.gov/admin/gwascatalog.txt [following]
---2016-04-19 23:22:22--  https://www.genome.gov/admin/gwascatalog.txt
+--2016-04-20 00:01:09--  https://www.genome.gov/admin/gwascatalog.txt
 Connecting to www.genome.gov (www.genome.gov)|156.40.242.24|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 10407265 (9.9M) [text/plain]
 Saving to: `gwascatalog.txt'
 
-100%[======================================================================================================>] 10,407,265  1.43M/s   in 7.3s    
+100%[======================================================================================================>] 10,407,265  1.46M/s   in 7.1s    
 
-2016-04-19 23:22:30 (1.36 MB/s) - `gwascatalog.txt' saved [10407265/10407265]
+2016-04-20 00:01:17 (1.39 MB/s) - `gwascatalog.txt' saved [10407265/10407265]
 
 Received: Coronary artery
 Done: Coronary artery
@@ -46,4 +46,12 @@ Phenotype: Coronary heart
 143 Coronary heart.gwascatalog.bed
 Phenotype: Bipolar disorder
 324 Bipolar disorder.gwascatalog.bed
+Gwas Catalog number of SNP-phenotype associations per category AFTER REMOVING DUPLICATES:
+Phenotype: Coronary artery
+89 Coronary artery.gwascatalog.bed.cut.sort.uniq
+Phenotype: Coronary heart
+130 Coronary heart.gwascatalog.bed.cut.sort.uniq
+Phenotype: Bipolar disorder
+310 Bipolar disorder.gwascatalog.bed.cut.sort.uniq
+
 </pre>
