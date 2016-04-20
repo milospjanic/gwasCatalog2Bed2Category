@@ -15,20 +15,20 @@ chmod 755 gwasCatalog2Bed2Category.sh
 chmod 755 gwasCatalog2Bed2Category.sh
 ~/gwasCatalog2Bed2Category "Coronary artery" "Coronary heart" "Bipolar disorder"
 
--2016-04-19 22:50:21--  http://www.genome.gov/admin/gwascatalog.txt
+--2016-04-19 23:14:53--  http://www.genome.gov/admin/gwascatalog.txt
 Resolving www.genome.gov (www.genome.gov)... 156.40.242.24
 Connecting to www.genome.gov (www.genome.gov)|156.40.242.24|:80... connected.
 HTTP request sent, awaiting response... 301 Moved Permanently
 Location: https://www.genome.gov/admin/gwascatalog.txt [following]
---2016-04-19 22:50:21--  https://www.genome.gov/admin/gwascatalog.txt
+--2016-04-19 23:14:54--  https://www.genome.gov/admin/gwascatalog.txt
 Connecting to www.genome.gov (www.genome.gov)|156.40.242.24|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 10407265 (9.9M) [text/plain]
-Saving to: `gwascatalog.txt.1'
+Saving to: `gwascatalog.txt.2'
 
-100%[======================================================================================================>] 10,407,265  1.39M/s   in 7.5s    
+100%[======================================================================================================>] 10,407,265  1.48M/s   in 7.0s    
 
-2016-04-19 22:50:29 (1.33 MB/s) - `gwascatalog.txt.1' saved [10407265/10407265]
+2016-04-19 23:15:01 (1.42 MB/s) - `gwascatalog.txt.2' saved [10407265/10407265]
 
 Received: Coronary artery
 Done: Coronary artery
@@ -36,5 +36,13 @@ Received: Coronary heart
 Done: Coronary heart
 Received: Bipolar disorder
 Done: Bipolar disorder
-
+Gwas Catalog number of SNP-phenotype associations:
+18899 gwascatalog.txt.cut
+Gwas Catalog number of SNP-phenotype associations per category:
+Phenotype: Coronary artery
+110 Coronary artery.gwascatalog.bed
+Phenotype: Coronary heart
+143 Coronary heart.gwascatalog.bed
+Phenotype: Bipolar disorder
+324 Bipolar disorder.gwascatalog.bed
 </pre>
