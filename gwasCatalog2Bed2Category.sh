@@ -30,6 +30,7 @@ do
 wc -l \"\$var\".gwascatalog.bed 
 done
 
+#bed files - cut, sort, and uniq
 for var in \"\$@\"
 do
 cut -f1-3 \"\$var\".gwascatalog.bed > \"\$var\".gwascatalog.bed.cut
@@ -39,12 +40,23 @@ rm \"\$var\".gwascatalog.bed.cut
 rm \"\$var\".gwascatalog.bed.cut.sort
 done
 
+#new stats
 echo "Gwas Catalog number of SNP-phenotype associations per category AFTER REMOVING DUPLICATES:"
 
 for var in \"\$@\"
 do
   echo Phenotype: \$var
 wc -l \"\$var\".gwascatalog.bed.cut.sort.uniq  
+
+done
+
+#substitute 23 24 with X Y, add chr
+for var in \"\$@\"
+do
+  echo Converting Phenotype: \$var
+sed -i 's/^23/X/g' \"\$var\".gwascatalog.bed.cut.sort.uniq
+sed -i 's/^24/Y/g' \"\$var\".gwascatalog.bed.cut.sort.uniq
+sed  's/^/chr/g' \"\$var\".gwascatalog.bed.cut.sort.uniq >  \"\$var\".gwascatalog.bed.cut.sort.uniq.chrXY
 done
 
 " > main.sh
@@ -55,5 +67,5 @@ chmod 775 main.sh
 
 #removing files
 rm gwascatalog.txt
-rm main.sh
+#rm main.sh
 
