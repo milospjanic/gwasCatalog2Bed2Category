@@ -18,14 +18,33 @@ do
 grep \"\$var\" GwasCatalog.bed > \"\$var\".gwascatalog.bed 
 echo Done: \$var
 done
+
 #print stats
 echo "Gwas Catalog number of SNP-phenotype associations:"
 wc -l GwasCatalog.bed
 echo "Gwas Catalog number of SNP-phenotype associations per category:"
+
 for var in \"\$@\"
 do
   echo Phenotype: \$var
 wc -l \"\$var\".gwascatalog.bed 
+done
+
+for var in \"\$@\"
+do
+cut -f1-3 \"\$var\".gwascatalog.bed > \"\$var\".gwascatalog.bed.cut
+sort -k1,1V -k2,2n \"\$var\".gwascatalog.bed.cut > \"\$var\".gwascatalog.bed.cut.sort
+uniq \"\$var\".gwascatalog.bed.cut.sort > \"\$var\".gwascatalog.bed.cut.sort.uniq 
+rm \"\$var\".gwascatalog.bed.cut
+rm \"\$var\".gwascatalog.bed.cut.sort
+done
+
+echo "Gwas Catalog number of SNP-phenotype associations per category AFTER REMOVING DUPLICATES:"
+
+for var in \"\$@\"
+do
+  echo Phenotype: \$var
+wc -l \"\$var\".gwascatalog.bed.cut.sort.uniq  
 done
 
 " > main.sh
